@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <title>MemeCoin Website</title>
+    <style>
+        :root {
+            --primary-background: #faedcd;
+            --secondary-background: color-mix(in srgb, var(--primary-background) 60%, black);
+            --heading-font: 'Luckiest Guy', sans-serif;
+            --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --primary-text-color: #000000;
+            --token-address: '0x1234567890123456789012345678901234567890'; /* Replace with actual token address */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--primary-text-color);
+            line-height: 1.6;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(26, 26, 26, 0.9);
+            padding: 1rem;
+            z-index: 1000;
+        }
+        
+
+        nav ul {
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            /* color: var(--primary-text-color); */
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 4rem 10%;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--primary-background);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--secondary-background);
+        }
+
+        h1, h2, h3, .buy-button {
+            font-family: var(--heading-font);
+            text-transform: uppercase;
+        }
+
+        h2{
+            font-size: 2.5rem;
+        }
+
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+
+        .placeholder-image {
+            width: 300px;
+            height: 200px;
+            background-color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .social-links, .buy-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a, .buy-links a {
+            color: var(--primary-text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary-text-color);
+            border-radius: 5px;
+            display: flex;
+        }
+
+        footer {
+            background-color: var(--primary-background);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            color:#ffffff;
+            font-weight: bold;
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Tokenomics cards */
+        .tokenomics-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .tokenomics-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        /* Roadmap timeline */
+        .roadmap-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .roadmap-phase {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .roadmap-phase::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            width: 20px;
+            height: 2px;
+            background-color: var(--primary-text-color);
+        }
+
+        .roadmap-phase:first-child::before {
+            display: none;
+        }
+
+        /* How to buy steps */
+        .how-to-buy-steps {
+            text-align: left;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .how-to-buy-steps ol {
+            margin-left: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                color: #ffffff;
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            nav ul {
+                text-transform: uppercase;
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-background);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                padding: 0.5rem;
+                text-align: center;
+            }
+
+            nav ul li a {
+                color: var(--primary-text-color) !important;
+            }
+
+            .tokenomics-cards {
+                padding: 0 1rem;
+                width: 100%;
+            }
+            
+            .tokenomics-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .how-to-buy-steps {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Add these styles for scroll snapping */
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll; /* Ensures scrolling behavior is consistent */
+        }
+
+        /* Optional: Add for smoother scrolling on iOS */
+        @supports (-webkit-touch-callout: none) {
+            html {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        /* Add these styles */
+        #hero {
+            background: linear-gradient(135deg, var(--primary-background), var(--secondary-background));
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: rotate(-5deg);
+        }
+
+        .hero-content {
+            scroll-padding-top: 60px;
+            padding-top: 60px;
+            margin-top: 60px;
+            padding: 1.5rem;
+            text-align: center;
+            height: calc(100dvh - 60px);
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+            position: relative;
+            /* background: rgba(67, 97, 238, 0.3); */
+            /* background:transparent; */
+            /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1008%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='var(--primary-background)'%3e%3c/rect%3e%3cpath d='M803.215%2c552.496C854.158%2c554.246%2c898.341%2c518.99%2c922.387%2c474.045C945.091%2c431.607%2c942.869%2c380.145%2c917.206%2c339.428C893.14%2c301.245%2c848.328%2c283.59%2c803.215%2c284.967C760.594%2c286.268%2c722.155%2c309.203%2c700.67%2c346.036C679.01%2c383.167%2c678.308%2c427.816%2c697.43%2c466.316C719.114%2c509.974%2c754.497%2c550.822%2c803.215%2c552.496' fill='var(--secondary-background)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-126.06 504.87 a132.06 132.06 0 1 0 264.12 0 a132.06 132.06 0 1 0 -264.12 0z' fill='var(--secondary-background)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M154.14 226.87 a102.73 102.73 0 1 0 205.46 0 a102.73 102.73 0 1 0 -205.46 0z' fill='var(--secondary-background)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M495.492%2c332.308C517.429%2c331.485%2c537.838%2c320.918%2c548.927%2c301.973C560.132%2c282.83%2c559.759%2c259.603%2c549.588%2c239.891C538.421%2c218.248%2c519.844%2c198.114%2c495.492%2c198.41C471.477%2c198.702%2c455.432%2c220.262%2c443.629%2c241.179C432.094%2c261.621%2c423.025%2c285.859%2c434.635%2c306.259C446.333%2c326.813%2c471.859%2c333.194%2c495.492%2c332.308' fill='var(--secondary-background)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M642.29 194.92 a101.79 101.79 0 1 0 203.58 0 a101.79 101.79 0 1 0 -203.58 0z' fill='var(--secondary-background)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M811.943%2c404.968C839.581%2c406.883%2c867.226%2c393.503%2c880.836%2c369.372C894.244%2c345.599%2c888.734%2c316.777%2c874.978%2c293.204C861.35%2c269.85%2c838.982%2c251.405%2c811.943%2c251.315C784.769%2c251.225%2c760.218%2c268.421%2c748.179%2c292.783C737.298%2c314.801%2c745.68%2c339.495%2c757.816%2c360.847C770.144%2c382.536%2c787.055%2c403.243%2c811.943%2c404.968' fill='var(--secondary-background)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1008'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+            /* backdrop-filter: blur(5px); */
+            z-index: 1;
+        }
+
+        .hero-logo {
+            width: 200px;
+            /* height: 200px; */
+            margin: 0 auto 1rem;
+            width: 100%;
+        }
+        .hero-logo img{
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .buy-button {
+            background: #ff4d6d;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            letter-spacing: 0.2em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            /* margin-top: 1rem; */
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+            transition: transform 0.2s;
+            border: 3px solid #000000;
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            
+        }
+
+        .hero-content h1 {
+            margin-bottom: 0;
+            /* font-size: 3.5rem; */
+            /* text-transform: uppercase; */
+            /* letter-spacing: -0.02em; */
+            /* font-weight: 900; */
+            /* color: white; */
+            /* -webkit-text-stroke: 4px black; */
+            /* text-shadow: 4px 4px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000, 0 5px 0 #000, 5px 0 0 #000, 0 -5px 0 #000, -5px 0 0 #000; */
+            /* margin-bottom: 1rem; */
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
+            max-width: 400px;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 2rem;
+        }
+
+        .social-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        .social-button {
+            flex: 1;
+            background: white;
+            border: 3px solid #000000;
+            border-radius: 20px;
+            padding: 0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .social-button img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .buy-button {
+            width: 100%;
+            text-align: center;
+        }
+
+        main {
+            /* padding-top: 60px; */
+            scroll-padding-top: 60px;
+        }
+    </style>
+</head>
+<body data-token-address="0x123456789012345678901234567890123456789">
+    <header>
+        <nav>
+            <div class="menu-toggle">&#9776; Menu</div>
+            <ul id="nav-menu"></ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>
+                    <img src="header.svg" style="width: 100%; max-width: 300px;" alt="MemeCoin Logo">
+                </h1>
+                <div class="hero-logo">
+                    <img src="100kbtc_main.png" alt="MemeCoin Logo">
+                </div>
+                <p>Certified Memester</p>
+                <div class="hero-buttons">
+                    <div class="social-row">
+                        <a href="#" class="social-button">
+                            <img src="telegram-logo.png" alt="Telegram">
+                        </a>
+                        <a href="#" class="social-button">
+                            <img src="twitter-logo.png" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-button">
+                            <img src="dexscreener-logo.png" alt="DexScreener">
+                        </a>
+                    </div>
+                    <a href="#" class="buy-button" id="buy-button" style="display: none;">BUY $MEME</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="fade-in">About</h2>
+            <p class="fade-in">Welcome to MemeCoin, the most exciting project in the crypto space! Our mission is to bring joy, laughter, and substantial gains to our community. Born from the vibrant meme culture, MemeCoin combines humor with serious tokenomics to create a unique investment opportunity.</p>
+            <p class="fade-in">What sets us apart? Our dedicated team of developers and marketers work tirelessly to ensure MemeCoin stays at the forefront of innovation. We believe in community-driven growth, transparency, and of course, the power of memes to change the world (and your portfolio)!</p>
+            <div class="placeholder-image fade-in">Placeholder Image</div>
+        </section>
+
+        <section id="tokenomics">
+            <h2 class="fade-in">Tokenomics</h2>
+            <p class="fade-in">Discover our token distribution and economics.</p>
+            <div class="tokenomics-cards">
+                <div class="tokenomics-card fade-in">
+                    <h3>Total Supply</h3>
+                    <p>1,000,000,000,000</p>
+                </div>
+                <div class="tokenomics-card fade-in">
+                    <h3>Launch Platform</h3>
+                    <p>PumpFun</p>
+                </div>
+                <div class="tokenomics-card fade-in">
+                    <h3>Rewards System</h3>
+                    <p>2% redistribution to holders</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap">
+            <h2 class="fade-in">Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-phase fade-in">
+                    <h3>Phase 1: Launch</h3>
+                    <p>Token launch on PumpFun, community building, and initial marketing push</p>
+                </div>
+                <div class="roadmap-phase fade-in">
+                    <h3>Phase 2: Growth</h3>
+                    <p>Expand marketing efforts, partnerships with influencers, and development of MemeCoin NFTs</p>
+                </div>
+                <div class="roadmap-phase fade-in">
+                    <h3>Phase 3: Expansion</h3>
+                    <p>Launch of MemeCoin merchandise, community events, and exploration of DeFi integrations</p>
+                </div>
+                <div class="roadmap-phase fade-in">
+                    <h3>Phase 4: Moon</h3>
+                    <p>Major exchange listings, MemeCoin ecosystem development, and global meme domination</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-buy">
+            <h2 class="fade-in">How to Buy</h2>
+            <div class="how-to-buy-steps fade-in">
+                <h3>Step-by-step guide to purchasing our token on PumpFun:</h3>
+                <ol>
+                    <li>Create a Solana wallet (e.g., Phantom, Solflare) if you don't have one already.</li>
+                    <li>Purchase SOL from a major exchange and transfer it to your Solana wallet.</li>
+                    <li>Visit the PumpFun website (https://pumpfun.io) and connect your Solana wallet.</li>
+                    <li>Search for MemeCoin ($MEME) in the PumpFun token list.</li>
+                    <li>Enter the amount of SOL you want to swap for MemeCoin.</li>
+                    <li>Review the transaction details and confirm the swap.</li>
+                    <li>Wait for the transaction to complete. MemeCoin will appear in your wallet.</li>
+                </ol>
+                <h3>Using DexScreener to track MemeCoin:</h3>
+                <ol>
+                    <li>Visit DexScreener (https://dexscreener.com).</li>
+                    <li>In the search bar, enter "MemeCoin" or our contract address.</li>
+                    <li>Click on the MemeCoin pair to view detailed price charts, trading volume, and other metrics.</li>
+                    <li>Bookmark the page for easy access to real-time MemeCoin data.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="PORN">
+            <h2 class="fade-in">How to Buy</h2>
+            <div class="how-to-buy-steps fade-in">
+                <h3>Step-by-step guide to purchasing our token on PumpFun:</h3>
+                <ol>
+                    <li>Create a Solana wallet (e.g., Phantom, Solflare) if you don't have one already.</li>
+                    <li>Purchase SOL from a major exchange and transfer it to your Solana wallet.</li>
+                    <li>Visit the PumpFun website (https://pumpfun.io) and connect your Solana wallet.</li>
+                    <li>Search for MemeCoin ($MEME) in the PumpFun token list.</li>
+                    <li>Enter the amount of SOL you want to swap for MemeCoin.</li>
+                    <li>Review the transaction details and confirm the swap.</li>
+                    <li>Wait for the transaction to complete. MemeCoin will appear in your wallet.</li>
+                </ol>
+                <h3>Using DexScreener to track MemeCoin:</h3>
+                <ol>
+                    <li>Visit DexScreener (https://dexscreener.com).</li>
+                    <li>In the search bar, enter "MemeCoin" or our contract address.</li>
+                    <li>Click on the MemeCoin pair to view detailed price charts, trading volume, and other metrics.</li>
+                    <li>Bookmark the page for easy access to real-time MemeCoin data.</li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Dexscreener</a>
+        </div>
+        <!-- <p>&copy; 2023 MemeCoin Project. All rights reserved.</p> -->
+
+    </footer>
+
+    <script>
+        // Dynamic navigation
+        const sections = document.querySelectorAll('section');
+        const navMenu = document.getElementById('nav-menu');
+
+        sections.forEach(section => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = `#${section.id}`;
+            a.textContent = section.id.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+            li.appendChild(a);
+            navMenu.appendChild(li);
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Show/hide buy button based on token address
+        const tokenAddress = document.body.dataset.tokenAddress;
+        const buyButton = document.getElementById('buy-button');
+
+        if (tokenAddress && tokenAddress !== '0x1234567890123456789012345678901234567890') {
+            buyButton.style.display = 'block';
+            // Optionally set the href to your DEX of choice
+            buyButton.href = `https://your-dex-url.com/swap?token=${tokenAddress}`;
+        }
+    </script>
+</body>
+</html>
