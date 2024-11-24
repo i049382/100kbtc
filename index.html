@@ -79,7 +79,7 @@
             }
     
             .hero {
-                margin-top: 60px; 
+                /* margin-top: 60px;  */
                 position: relative;
                 width: 100vw;
                 height: calc(100dvh - 60px);
@@ -727,7 +727,13 @@
                 backdrop-filter: blur(10px);
                 z-index: 1000;
                 padding: 1rem 0;
-                display:flex;
+            }
+    
+            .top-nav .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
             }
     
             .nav-links {
@@ -736,7 +742,6 @@
                 list-style: none;
                 padding: 0;
                 margin: 0;
-                font-weight: 700;
             }
     
             .nav-links li {
@@ -748,10 +753,8 @@
                 text-decoration: none;
                 font-family: var(--heading-font);
                 font-weight: 700;
-                font-size: 1rem;
                 transition: color 0.3s ease;
                 text-transform: uppercase;
-                font-weight: bold;
             }
     
             .nav-links a:hover {
@@ -760,26 +763,32 @@
     
             .mobile-menu-button {
                 display: none;
-                gap: 0.5rem;
-                font-family: var(--heading-font);
-                font-weight: 700;
-                width: 40px;
-                height: auto;
+                background: none;
+                border: none;
                 cursor: pointer;
+                padding: 0.5rem;
+            }
+    
+            .mobile-menu-button img {
+                width: 24px;
+                height: 24px;
             }
     
             @media (max-width: 768px) {
+                .mobile-menu-button {
+                    display: block;
+                    z-index: 1001;
+                }
+    
                 .nav-links {
                     display: none;
-                    flex-direction: column;
-                    align-items: center;
                     position: absolute;
                     top: 100%;
                     left: 0;
                     width: 100%;
                     background: rgba(15, 23, 42, 0.95);
+                    flex-direction: column;
                     padding: 1rem 0;
-                    z-index: 1000; /* Add this to ensure menu appears above other content */
                 }
     
                 .nav-links.show {
@@ -788,34 +797,12 @@
     
                 .nav-links li {
                     margin: 0.5rem 0;
-                    width: 100%;
                     text-align: center;
                 }
     
                 .nav-links a {
                     display: block;
                     padding: 0.5rem 0;
-                    width: 100%;
-                }
-    
-                .mobile-menu-button {
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    cursor: pointer;
-                    padding: 0.5rem;
-                    z-index: 1001; /* Add this to ensure button stays clickable */
-                }
-
-                .mobile-menu-button img {
-                    width: 20px;
-                    height: auto;
-                }
-    
-                .top-nav .container {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
                 }
             }
     
@@ -1020,33 +1007,64 @@
                     padding: 0.5rem 0;
                 }
             }
+
+            /* Mobile menu styles */
+            .mobile-menu-button {
+                display: none; /* Hidden by default */
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 10px;
+                z-index: 1001;
+            }
+
+            @media (max-width: 768px) {
+                .mobile-menu-button {
+                    display: block; /* Show on mobile */
+                    position: relative;
+                }
+
+                .nav-links {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(15, 23, 42, 0.95);
+                    padding: 20px 0;
+                    text-align: center;
+                }
+
+                .nav-links.show {
+                    display: block;
+                }
+
+                .nav-links li {
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                .nav-links a {
+                    display: block;
+                    padding: 10px 0;
+                }
+            }
         </style>
     </head>
 <body>
-    <nav class="navbar">
+    <nav class="top-nav">
         <div class="container">
-            <!-- <div class="logo">
-                <img src="assets/logo.png" alt="$BTC100K Logo">
-            </div> -->
-            
-            <!-- Mobile menu button -->
-            <button class="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
+            <button class="mobile-menu-button" aria-label="Menu">
+                <!-- Replace with a simple text ☰ instead of an image -->
+                ☰
             </button>
-
-            <!-- Navigation links -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <!-- <li><a href="#tokenomics">Tokenomics</a></li> -->
                 <li><a href="#roadmap">Roadmap</a></li>
                 <li><a href="#how-to-buy">How To Buy</a></li>
-                
-                <!-- <li><a href="#buy">How to Buy</a></li> -->
             </ul>
         </div>
     </nav>
@@ -1089,9 +1107,6 @@
                     <img src="trojan.svg" alt="Trojan">
                     Trojan
                 </a> -->
-                
-                
-                
                 
                 
                 <!-- <a href="https://jup.ag/swap/SOL-GCvHbweRkuP5jnosAN4Aju78uzjaZEhkAoqgEZWsaENn" target="_blank" class="hero-button" style="grid-column: span 3; height:50px; font-size: xx-large; font-family: var(--heading-font);">
@@ -1532,6 +1547,17 @@
                 cursor: pointer;
                 padding: 0.5rem;
                 z-index: 1001; /* Add this to ensure button stays clickable */
+            }
+
+            .mobile-menu-button img {
+                width: 20px;
+                height: auto;
+            }
+
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
         }
     </style>
