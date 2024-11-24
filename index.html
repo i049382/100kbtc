@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>100KBTC Token (NoNut)</title>
+
+        <!-- Add OG Meta Tags -->
+        <meta property="og:title" content="100kBTC - Resist the urge, earn the surge!">
+        <meta property="og:description" content="Join the 100KBTC November challenge with $NoNut token on Solana. Daily airdrops, locked liquidity, and a community of diamond hands!">
+        <meta property="og:image" content="https://nonuttoken.com/nnt.jpg">
+        <meta property="og:url" content="https://nonuttoken.com">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@nonuttoken">
+        <meta name="twitter:title" content="100KBTC Token ($NoNut)">
+        <meta name="twitter:description" content="Join the 100KBTC November challenge with $NoNut token on Solana. Daily airdrops, locked liquidity, and a community of diamond hands!">
+        <meta name="twitter:image" content="https://nonuttoken.com/nnt.jpg">
+
+        
+        <link rel="icon" type="image/svg+xml" href="nonuthead.svg">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <style>
+            html{
+                scroll-padding-top: 60px; 
+            }
+
+            :root{
+                scroll-padding-top: 55px;
+                --heading-font: 'Montserrat', sans-serif;
+                --background-primary: #DDDCD9   ;
+                /* Creating a slightly darker shade for alternating sections */
+                --background-secondary: color-mix(in srgb, var(--background-primary) 85%, black);
+                /* Add new primary text color variable */
+                --text-primary: #000000;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+    
+            body {
+                background: var(--background-primary);
+                color: #fff;
+                line-height: 1.6;
+                overflow-x: hidden;
+                
+                /* padding-top: 60px; */
+            }
+    
+            .container {    
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+            }
+    
+            section {
+                min-height: 50vh;
+                width: 100%;
+                padding: clamp(2rem, 5vh, 4rem) 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+            }
+    
+            .hero {
+                margin-top: 60px; 
+                position: relative;
+                width: 100vw;
+                height: calc(100dvh - 60px);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: clamp(2rem, 5vh, 4rem) clamp(1rem, 3vw, 2rem);
+                overflow: hidden;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1008%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient1009%26quot%3b)'%3e%3c/rect%3e%3cpath d='M803.215%2c552.496C854.158%2c554.246%2c898.341%2c518.99%2c922.387%2c474.045C945.091%2c431.607%2c942.869%2c380.145%2c917.206%2c339.428C893.14%2c301.245%2c848.328%2c283.59%2c803.215%2c284.967C760.594%2c286.268%2c722.155%2c309.203%2c700.67%2c346.036C679.01%2c383.167%2c678.308%2c427.816%2c697.43%2c466.316C719.114%2c509.974%2c754.497%2c550.822%2c803.215%2c552.496' fill='rgba(187, 186, 183, 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-126.06 504.87 a132.06 132.06 0 1 0 264.12 0 a132.06 132.06 0 1 0 -264.12 0z' fill='rgba(187, 186, 183, 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M154.14 226.87 a102.73 102.73 0 1 0 205.46 0 a102.73 102.73 0 1 0 -205.46 0z' fill='rgba(187, 186, 183, 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M495.492%2c332.308C517.429%2c331.485%2c537.838%2c320.918%2c548.927%2c301.973C560.132%2c282.83%2c559.759%2c259.603%2c549.588%2c239.891C538.421%2c218.248%2c519.844%2c198.114%2c495.492%2c198.41C471.477%2c198.702%2c455.432%2c220.262%2c443.629%2c241.179C432.094%2c261.621%2c423.025%2c285.859%2c434.635%2c306.259C446.333%2c326.813%2c471.859%2c333.194%2c495.492%2c332.308' fill='rgba(187, 186, 183, 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M642.29 194.92 a101.79 101.79 0 1 0 203.58 0 a101.79 101.79 0 1 0 -203.58 0z' fill='rgba(187, 186, 183, 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M811.943%2c404.968C839.581%2c406.883%2c867.226%2c393.503%2c880.836%2c369.372C894.244%2c345.599%2c888.734%2c316.777%2c874.978%2c293.204C861.35%2c269.85%2c838.982%2c251.405%2c811.943%2c251.315C784.769%2c251.225%2c760.218%2c268.421%2c748.179%2c292.783C737.298%2c314.801%2c745.68%2c339.495%2c757.816%2c360.847C770.144%2c382.536%2c787.055%2c403.243%2c811.943%2c404.968' fill='rgba(187, 186, 183, 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1008'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='-39.29%25' x2='84.72%25' y2='139.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1009'%3e%3cstop stop-color='%23BBBAB7' offset='0'%3e%3c/stop%3e%3cstop stop-color='%23DDDCD9' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+    
+            .hero-content {
+                max-width: 60%;
+                z-index: 1;
+            }
+    
+            .logo-container {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                /* width: 40%; */
+                max-width: 1000px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .logo-container img {
+                aspect-ratio: 3 / 3;
+    width: 125%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+            }
+    
+            h1, h2, h3, h4, h5, h6 {
+                font-family: var(--heading-font);
+                font-weight: 800;
+                text-transform: uppercase;
+                color: var(--text-primary);
+            }
+    
+            h1 {
+                font-size: clamp(1.8rem, 6vw, 4rem);
+                margin-bottom: clamp(0.5rem, 2vh, 1rem);
+                /* background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%); */
+                /* -webkit-background-clip: text; */
+                /* -webkit-text-fill-color: transparent; */
+                padding: 0 1rem;
+                line-height: normal;
+                /* text-align: center; */
+            }
+    
+            .slogan {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+                color: var(--text-primary);
+                margin-bottom: clamp(1rem, 3vh, 2rem);
+                padding: 0 1rem;
+            }
+    
+            .tokenomics {
+                background: var(--background-secondary);
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+                position: relative;  /* Add this */
+                overflow: hidden;    /* Add this */
+            }
+    
+            /* Add these new styles for the tokenomics images */
+            .tokenomics-top-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150px;
+                height: auto;
+                opacity: 0.5;
+                pointer-events: none;
+            }
+    
+            .tokenomics-bottom-image {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 150px;
+                height: auto;
+                opacity: 0.5;
+                pointer-events: none;
+            }
+    
+            @media (max-width: 768px) {
+                .tokenomics-top-image {
+                    top: -7vw;
+                    width: 50vw;
+                    left: -5vw;
+                    z-index: 0;
+                }
+    
+                .tokenomics-bottom-image {
+                    bottom: -5vw;
+                    width: 60vw;
+                    right: 0vw;
+                    z-index: 0;
+                }
+            }
+    
+            .tokenomics-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+                gap: clamp(1rem, 3vw, 2rem);
+                width: 100%;
+                max-width: 1000px;
+                padding: 0 clamp(0.5rem, 2vw, 1rem);
+            }
+    
+            .tokenomics-item {
+                background: #2d3748cc;
+                padding: clamp(1.5rem, 4vw, 2rem);
+                border-radius: 1rem;
+                text-align: center;
+                height: 100%;
+            }
+    
+            .tokenomics-item h3 {
+                color: var(--text-primary);
+                margin-bottom: clamp(0.5rem, 2vh, 1rem);
+                font-size: clamp(1rem, 3vw, 1.25rem);
+            }
+    
+            .airlock {
+                background: var(--background-primary);
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+            }
+    
+            .airlock-features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+                gap: clamp(1rem, 3vw, 2rem);
+                width: 100%;
+                max-width: 1000px;
+                padding: 0 clamp(0.5rem, 2vw, 1rem);
+            }
+    
+            .feature-card {
+                /* #D0AA42 */
+                background: rgba(208, 170, 66, 0.1);
+                padding: clamp(1.5rem, 4vw, 2rem);
+                border-radius: 1rem;
+                backdrop-filter: blur(10px);
+            }
+    
+            .feature-card h3 {
+                font-size: clamp(1rem, 5vw, 1.25rem);
+                margin-bottom: 1rem;
+                color: var(--text-primary);
+            }
+    
+            .feature-card p {
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+                line-height: 1.6;
+                color: var(--text-primary);
+            }
+    
+            .buy {
+                background: var(--background-secondary);
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+                text-align: center;
+            }
+    
+            .buy-button {
+                background: #3b82f6;
+                color: white;
+                padding: clamp(0.8rem, 2.5vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-size: clamp(1rem, 3vw, 1.2rem);
+                transition: all 0.3s ease;
+                display: inline-block;
+                margin: 0 auto;
+            }
+    
+            .community {
+                background: var(--background-primary);
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+                text-align: center;
+            }
+    
+            .social-links {
+                display: flex;
+                gap: clamp(1rem, 3vw, 2rem);
+                margin-top: clamp(1rem, 3vh, 2rem);
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    
+            .social-link {
+                background: #3b82f6;
+                color: white;
+                width: clamp(50px, 15vw, 60px);
+                height: clamp(50px, 15vw, 60px);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
+                transition: all 0.3s ease;
+            }
+    
+            section h2 {
+                font-size: clamp(1.5rem, 8vw, 2.5rem);
+                margin-bottom: clamp(1.5rem, 4vh, 3rem);
+                color: var(--text-primary);
+                text-align: center;
+                padding: 0 1rem;
+            }
+    
+            .countdown {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+                gap: clamp(0.5rem, 2vw, 1rem);
+                margin-top: clamp(0.5rem, 2vh, 1rem);
+                width: 100%;
+            }
+    
+            .countdown-item {
+                background: rgba(59, 130, 246, 0.5);
+                padding: clamp(0.5rem, 2vw, 1rem);
+                border-radius: 0.5rem;
+                text-align: center;
+            }
+    
+            .countdown-value {
+                font-size: clamp(1.2rem, 4vw, 1.5rem);
+                font-weight: bold;
+                /* color: #60a5fa; */
+                color: #ffffff;
+            }
+    
+            .countdown-label {
+                font-size: clamp(0.7rem, 2vw, 0.8rem);
+                /* color: #94a3b8; */
+                color: #ffffff;
+            }
+    
+            .roadmap {
+                background: var(--background-secondary);
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+                position: relative;
+                overflow: hidden;  /* Keep this to prevent image overflow */
+            }
+    
+            .roadmap-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150px;
+                height: auto;
+                opacity: 0.5;
+                pointer-events: none;
+            }
+    
+            /* Add this new CSS for the bottom image */
+            .roadmap-bottom-image {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 150px;
+                height: auto;
+                opacity: 0.5;
+                pointer-events: none;
+            }
+    
+            @media (max-width: 768px) {
+                .roadmap-image {
+                    top: -7vw;
+        width: 50vw;
+        left: -5vw;
+        z-index: 0;
+                }
+    
+                /* Add mobile styles for bottom image */
+                .roadmap-bottom-image {
+                    bottom: -7vw;
+        width: 40vw;
+        left: 0vw;
+        z-index: 1;
+                }
+            }
+    
+            .timeline {
+                position: relative;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem 0;
+            }
+    
+            .timeline::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                background: #3b82f6;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            .timeline-item {
+                padding: 1rem 2rem;
+                position: relative;
+                width: 50%;
+                margin-bottom: 2rem;
+            }
+    
+            .timeline-item:nth-child(odd) {
+                left: 0;
+                padding-right: 3rem;
+            }
+    
+            .timeline-item:nth-child(even) {
+                left: 50%;
+                padding-left: 3rem;
+            }
+    
+            .timeline-content {
+                background: #2d3748;
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                position: relative;
+            }
+    
+            .timeline-content::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: #3b82f6;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+    
+            .timeline-item:nth-child(odd) .timeline-content::before {
+                right: -3.5rem;
+            }
+    
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -3.5rem;
+            }
+    
+            .timeline-date {
+                color: #60a5fa;
+                font-family: var(--heading-font);
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+    
+            .timeline-content h3 {
+                color: var(--text-primary);
+                margin-bottom: 0.5rem;
+            }
+    
+            .timeline-content p {
+                color: #94a3b8;
+                margin: 0;
+            }
+    
+            /* Enhanced Mobile Styles */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 0 15px;
+                    z-index:1;
+                }
+    
+                section {
+                    padding: clamp(1.5rem, 4vh, 3rem) 0;
+                }
+    
+                .hero {
+                    padding: clamp(1rem, 2vh, 1.5rem) 1rem;
+                }
+    
+                h1 {
+                    font-size: clamp(1.5rem, 10vw, 2.5rem);
+                    width:100%;
+                    text-align: center;
+                }
+    
+                .slogan {
+                    font-size: clamp(0.9rem, 3vw, 1.2rem);
+                }
+    
+                .launch-timer {
+                    width: 95%;
+                    padding: clamp(0.8rem, 2vw, 1.2rem);
+                }
+    
+                .countdown {
+                    grid-template-columns: repeat(4, 1fr);
+                    max-width: 300px;
+                    margin: 1rem auto 0;
+                    gap: 0.5rem;
+                }
+    
+                .countdown-item {
+                    padding: clamp(0.3rem, 1.5vw, 0.8rem);
+                }
+    
+                .countdown-value {
+                    font-size: clamp(1rem, 3.5vw, 1.3rem);
+                }
+    
+                .countdown-label {
+                    font-size: clamp(0.6rem, 1.8vw, 0.7rem);
+                }
+    
+                .tokenomics-grid, .airlock-features {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+    
+                .tokenomics-item, .feature-card {
+                    padding: clamp(1rem, 3vw, 1.5rem);
+                }
+    
+                .buy-button {
+                    padding: clamp(0.6rem, 2vw, 0.8rem) clamp(1.2rem, 3vw, 1.5rem);
+                    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+                }
+    
+                .social-links {
+                    gap: clamp(0.5rem, 2vw, 1rem);
+                }
+    
+                .social-link {
+                    width: clamp(40px, 12vw, 50px);
+                    height: clamp(40px, 12vw, 50px);
+                    font-size: clamp(1rem, 3.5vw, 1.3rem);
+                }
+    
+                .timeline::before {
+                    left: 1rem;  /* Move the timeline line to the left */
+                }
+    
+                .timeline-item {
+                    width: calc(100% - 2rem);  /* Full width minus some padding */
+                    padding: 1rem 0 1rem 3rem !important;  /* Consistent padding for all items */
+                    left: 0 !important;  /* Reset left positioning */
+                }
+    
+                .timeline-item:nth-child(odd),
+                .timeline-item:nth-child(even) {
+                    left: 0;
+                    padding-left: 3rem;
+                }
+    
+                .timeline-content::before {
+                    left: -2.5rem !important;  /* Consistent positioning of dots */
+                }
+    
+                .timeline-content {
+                    width: 100%;  /* Full width */
+                }
+            }
+    
+            /* Small Mobile Devices */
+            @media (max-width: 380px) {
+                /* .logo-container {
+                    width: 120px;
+                    height: 120px;
+                } */
+    
+                h1 {
+                    font-size: 1.5rem;
+                }
+    
+                .slogan {
+                    font-size: 0.9rem;
+                }
+    
+                section h2 {
+                    font-size: clamp(1.2rem, 4vw, 1.8rem);
+                }
+    
+                .tokenomics-item h3, .feature-card h3 {
+                    font-size: clamp(0.9rem, 2.8vw, 1.1rem);
+                }
+    
+                .tokenomics-item p, .feature-card p {
+                    font-size: clamp(0.8rem, 2.3vw, 0.9rem);
+                }
+            }
+    
+            @media (max-width: 1024px) {
+                .hero-content {
+                    max-width: 100%;
+                    text-align: center;
+                    align-items: center;
+                    width:100%;
+                }
+    
+                /* .logo-container {
+                    width: 100%;
+                    max-width: 300px;
+                    justify-content: center;
+                    left: 50%;
+                    transform: translateX(-50%);
+                } */
+            }
+    
+            @media (max-width: 768px) {
+                .hero {
+                    padding: clamp(1rem, 3vh, 2rem) 1rem;
+                }
+    
+                /* .logo-container {
+                    max-width: 200px;
+                } */
+    
+                /* ... other mobile styles ... */
+            }
+    
+            @media (max-width: 480px) {
+                /* .logo-container {
+                    max-width: 150px;
+                } */
+    
+                /* ... other small mobile styles ... */
+            }
+    
+            .confessions {
+                background: #1e293b;
+                padding: clamp(2rem, 5vh, 4rem) 1rem;
+            }
+    
+            .confession-form {
+                display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    width: 100%;
+            }
+            .confession-form textarea{
+                height:150px
+            }
+            .confession-form textarea,
+            .confession-form input {
+                padding: 0.5rem;
+                border-radius: 0.25rem;
+                border: 1px solid #3b82f6;
+                background: #2d3748;
+                color: #fff;
+            }
+    
+            .confession-form textarea::placeholder,
+            .confession-form input::placeholder {
+                color: #94a3b8;
+            }
+    
+            .submit-button {
+                background: #3b82f6;
+                color: white;
+                padding: 0.5rem 1rem;
+                border: none;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            .submit-button:hover {
+                background: #2563eb;
+            }
+    
+            .submission-message {
+                text-align: center;
+                margin-top: 1rem;
+                color: #4ade80;
+            }
+    
+            .confessions h2 {
+                color: #60a5fa;
+                margin-bottom: 1rem;
+            }
+    
+            .confession-intro {
+                text-align: center;
+                color: #94a3b8;
+                margin-bottom: 2rem;
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            .confession-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+    
+            .nonut-head {
+                width: 50px;
+                height: auto;
+                animation: wobble 2s ease-in-out infinite;
+            }
+    
+            @keyframes wobble {
+                0% { transform: rotate(0deg); }
+                25% { transform: rotate(-5deg); }
+                50% { transform: rotate(0deg); }
+                75% { transform: rotate(5deg); }
+                100% { transform: rotate(0deg); }
+            }
+    
+            @media (max-width: 768px) {
+                .confession-header {
+                    flex-direction: column;
+                }
+    
+                .nonut-head {
+                    width: 40px;
+                }
+            }
+    
+            .top-nav {
+                position: sticky;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(15, 23, 42, 0.8);
+                backdrop-filter: blur(10px);
+                z-index: 1000;
+                padding: 1rem 0;
+                display:flex;
+            }
+    
+            .nav-links {
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-weight: 700;
+            }
+    
+            .nav-links li {
+                margin: 0 1rem;
+            }
+    
+            .nav-links a {
+                color: #fff;
+                text-decoration: none;
+                font-family: var(--heading-font);
+                font-weight: 700;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+    
+            .nav-links a:hover {
+                color: #60a5fa;
+            }
+    
+            .mobile-menu-button {
+                display: none;
+                gap: 0.5rem;
+                font-family: var(--heading-font);
+                font-weight: 700;
+                width: 40px;
+                height: auto;
+                cursor: pointer;
+            }
+    
+            @media (max-width: 768px) {
+                .nav-links {
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(15, 23, 42, 0.95);
+                    padding: 1rem 0;
+                    z-index: 1000; /* Add this to ensure menu appears above other content */
+                }
+    
+                .nav-links.show {
+                    display: flex;
+                }
+    
+                .nav-links li {
+                    margin: 0.5rem 0;
+                    width: 100%;
+                    text-align: center;
+                }
+    
+                .nav-links a {
+                    display: block;
+                    padding: 0.5rem 0;
+                    width: 100%;
+                }
+    
+                .mobile-menu-button {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    cursor: pointer;
+                    padding: 0.5rem;
+                    z-index: 1001; /* Add this to ensure button stays clickable */
+                }
+
+                .mobile-menu-button img {
+                    width: 20px;
+                    height: auto;
+                }
+    
+                .top-nav .container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+    
+            .hero-buttons {
+                display: flex;
+                display:grid;
+                grid-template-columns: repeat(3, 1fr);
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+    
+            .hero-button {
+                color: var(--text-primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                /* background: rgba(59, 130, 246, 0.1); */
+                border: 2px solid #D0AA42;
+                /* color: #fff; */
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                text-decoration: none;
+                font-family: 'Luckiest Guy', cursive;
+                transition: all 0.3s ease;
+                padding:5px;
+            }
+    
+            .hero-button:hover {
+                background: rgba(59, 130, 246, 0.2);
+                transform: translateY(-2px);
+            }
+    
+            .hero-button img, .hero-button svg {
+                width: 32px;
+                height: 32px;
+            }
+    
+            @media (max-width: 768px) {
+                .hero-buttons {
+                    justify-content: center;
+                    gap: 0.5rem;
+                }
+    
+                .hero-button {
+                    padding: 0.4rem 0.8rem;
+                    font-size: 0.9rem;
+                }
+    
+                .hero-button img {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .hero-button[style*="grid-column: span 3"] {
+                animation: shake 2s ease-in-out infinite;
+                transform-origin: center;
+            }
+
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+
+            .hero-button[style*="grid-column: span"] {
+                font-family: var(--heading-font);
+            }
+
+            .about {
+                background: var(--background-primary);
+                color: #1a1a1a;
+            }
+
+            .about-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .about-section {
+                margin-bottom: 3rem;
+            }
+
+            .about-section h3 {
+                color: var(--text-primary);
+                margin-bottom: 1rem;
+                font-size: clamp(1.2rem, 3vw, 1.5rem);
+            }
+
+            .about-section p {
+                margin-bottom: 1rem;
+                line-height: 1.8;
+                color: #4a4a4a;
+            }
+
+            .celebration-steps {
+                /* background: rgba(96, 165, 250, 0.1); */
+                background: rgba(208, 170, 66, 0.1);
+                padding: 1.5rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .step {
+                padding: 0.8rem;
+                margin-bottom: 0.5rem;
+                color: #4a4a4a;
+                border-left: 3px solid #D0AA42;
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            .step:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (max-width: 768px) {
+                .about-content {
+                    padding: 0 1rem;
+                }
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(15, 23, 42, 0.95);
+                z-index: 1000;
+                padding: 1rem 0;
+            }
+
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .nav-links a:hover {
+                color: #60a5fa;
+            }
+
+            .mobile-menu-button {
+                display: none;
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+                padding: 0.5rem;
+            }
+
+            @media (max-width: 768px) {
+                .mobile-menu-button {
+                    display: block;
+                }
+
+                .nav-links {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    background: rgba(15, 23, 42, 0.95);
+                    flex-direction: column;
+                    padding: 1rem 0;
+                    text-align: center;
+                }
+
+                .nav-links.show {
+                    display: flex;
+                }
+
+                .nav-links li {
+                    margin: 0.5rem 0;
+                }
+
+                .nav-links a {
+                    display: block;
+                    padding: 0.5rem 0;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <!-- <div class="logo">
+                <img src="assets/logo.png" alt="BTCto100k Logo">
+            </div> -->
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#buy">How to Buy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero" data-aos="fade-in">
+        <div class="hero-content">
+            <h1>100kbtc<br>($100kbtc)</h1>
+            <p class="slogan">A celebration of Bitcoin's Final Sprint to Glory</p>
+            <div class="hero-buttons">
+                <a href="https://t.me/HundredKBTC_Portall" target="_blank" class="hero-button">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" focusable="false" class="chakra-icon custom-1gm3tio" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg>
+                    
+                    <!-- Telegram -->
+                </a>
+                <a href="https://www.x.com/nonuttoken" target="_blank" class="hero-button">
+                    <svg stroke="currentColor" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.8 45" style="enable-background:new 0 0 49.8 45;">
+                        <g>
+                            <path fill="currentColor" d="M39.2,0h7.6L30.2,19.1L49.8,45H34.4l-12-15.7L8.6,45H1l17.8-20.4L0,0h15.8l10.9,14.4L39.2,0z M36.5,40.4h4.2L13.5,4.3H8.9L36.5,40.4z">
+                            </path>
+                        </g>
+                    </svg>
+                    
+                    <!-- Twitter -->
+                </a>
+                <!-- <a href="#" target="_blank" class="hero-button">
+                    <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="ds-nav-main-nav-chain-icon" aria-label="Moonshot"><path d="M69.8374 47.9306C70.6307 46.0406 68.3635 44.4306 66.4618 45.2706C62.6606 46.9392 58.5535 47.7974 54.4022 47.7906C38.127 47.7906 24.9358 34.864 24.9358 18.9157C24.9298 13.531 26.4597 8.25619 29.3458 3.71022C30.4503 1.968 29.1242 -0.443102 27.1019 0.0702296C11.5112 4.04855 0 17.9396 0 34.4635C0 54.0906 16.2363 70 36.2681 70C51.435 70 64.424 60.8806 69.8374 47.9306Z" fill="currentColor"></path><path d="M62.6526 8.11672C63.4175 5.86247 60.5264 4.19344 58.9554 5.97929L56.155 9.16564C55.0196 10.458 53.5269 11.3853 51.8652 11.8306C50.2035 12.2758 48.4472 12.2191 46.8178 11.6675L42.7993 10.3083C40.5459 9.5472 38.8776 12.4418 40.6671 14.0116L43.8526 16.8081C45.1451 17.9433 46.0724 19.4359 46.5176 21.0974C46.9628 22.759 46.906 24.5152 46.3543 26.1446L44.9948 30.1628C44.23 32.417 47.1211 34.0861 48.6911 32.2966L51.4915 29.1103C52.6269 27.8179 54.1195 26.8906 55.7812 26.4453C57.4429 26.0001 59.1993 26.0568 60.8287 26.6084L64.8472 27.9676C67.1015 28.7323 68.7708 25.8413 66.9803 24.2679L63.7948 21.4714C62.5024 20.3362 61.5751 18.8436 61.1299 17.1821C60.6847 15.5205 60.7415 13.7643 61.2931 12.1349L62.6526 8.11672Z" fill="currentColor"></path></svg>
+
+                </a> -->
+                <a href="https://dexscreener.com/solana/bg8qfafrtyeloczrkv98vsetgavcqrgrxq6hf1bormwq" target="_blank" class="hero-button">
+                    <svg stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#fff" fill-rule="evenodd" viewBox="0 0 252 300" focusable="false" class="chakra-icon custom-1as9hu"><path d="M151.818 106.866c9.177-4.576 20.854-11.312 32.545-20.541 2.465 5.119 2.735 9.586 1.465 13.193-.9 2.542-2.596 4.753-4.826 6.512-2.415 1.901-5.431 3.285-8.765 4.033-6.326 1.425-13.712.593-20.419-3.197m1.591 46.886l12.148 7.017c-24.804 13.902-31.547 39.716-39.557 64.859-8.009-25.143-14.753-50.957-39.556-64.859l12.148-7.017a5.95 5.95 0 003.84-5.845c-1.113-23.547 5.245-33.96 13.821-40.498 3.076-2.342 6.434-3.518 9.747-3.518s6.671 1.176 9.748 3.518c8.576 6.538 14.934 16.951 13.821 40.498a5.95 5.95 0 003.84 5.845zM126 0c14.042.377 28.119 3.103 40.336 8.406 8.46 3.677 16.354 8.534 23.502 14.342 3.228 2.622 5.886 5.155 8.814 8.071 7.897.273 19.438-8.5 24.796-16.709-9.221 30.23-51.299 65.929-80.43 79.589-.012-.005-.02-.012-.029-.018-5.228-3.992-11.108-5.988-16.989-5.988s-11.76 1.996-16.988 5.988c-.009.005-.017.014-.029.018-29.132-13.66-71.209-49.359-80.43-79.589 5.357 8.209 16.898 16.982 24.795 16.709 2.929-2.915 5.587-5.449 8.814-8.071C69.31 16.94 77.204 12.083 85.664 8.406 97.882 3.103 111.959.377 126 0m-25.818 106.866c-9.176-4.576-20.854-11.312-32.544-20.541-2.465 5.119-2.735 9.586-1.466 13.193.901 2.542 2.597 4.753 4.826 6.512 2.416 1.901 5.432 3.285 8.766 4.033 6.326 1.425 13.711.593 20.418-3.197"></path><path d="M197.167 75.016c6.436-6.495 12.107-13.684 16.667-20.099l2.316 4.359c7.456 14.917 11.33 29.774 11.33 46.494l-.016 26.532.14 13.754c.54 33.766 7.846 67.929 24.396 99.193l-34.627-27.922-24.501 39.759-25.74-24.231L126 299.604l-41.132-66.748-25.739 24.231-24.501-39.759L0 245.25c16.55-31.264 23.856-65.427 24.397-99.193l.14-13.754-.016-26.532c0-16.721 3.873-31.578 11.331-46.494l2.315-4.359c4.56 6.415 10.23 13.603 16.667 20.099l-2.01 4.175c-3.905 8.109-5.198 17.176-2.156 25.799 1.961 5.554 5.54 10.317 10.154 13.953 4.48 3.531 9.782 5.911 15.333 7.161 3.616.814 7.3 1.149 10.96 1.035-.854 4.841-1.227 9.862-1.251 14.978L53.2 160.984l25.206 14.129a41.926 41.926 0 015.734 3.869c20.781 18.658 33.275 73.855 41.861 100.816 8.587-26.961 21.08-82.158 41.862-100.816a41.865 41.865 0 015.734-3.869l25.206-14.129-32.665-18.866c-.024-5.116-.397-10.137-1.251-14.978 3.66.114 7.344-.221 10.96-1.035 5.551-1.25 10.854-3.63 15.333-7.161 4.613-3.636 8.193-8.399 10.153-13.953 3.043-8.623 1.749-17.689-2.155-25.799l-2.01-4.175z"></path></svg>
+                    <!-- Chart -->
+                </a>
+                <!-- <a href="#" target="_blank" class="hero-button">
+                    <img src="trojan.svg" alt="Trojan">
+                    Trojan
+                </a> -->
+                <a href="https://jup.ag/swap/SOL-GCvHbweRkuP5jnosAN4Aju78uzjaZEhkAoqgEZWsaENn" target="_blank" class="hero-button" style="grid-column: span 3; height:50px; font-size: xx-large; font-family: var(--heading-font);">
+                    BUY HERE
+                </a>
+              
+            </div>
+            
+        </div>
+        <div class="logo-container" data-aos="zoom-in" data-aos-delay="30">
+            <img src="100kbtc_main.png" alt="100KBTC Token Logo">
+        </div>
+    </section>
+
+    <section id="about" class="about" data-aos="fade-up" style="min-height: 100vh;">
+        <div class="container">
+            <h2>About BTCto100k</h2>
+            <div class="about-content">
+                <div class="about-section" data-aos="fade-up">
+                    <h3>A Celebration of Bitcoin's Final Sprint to Glory</h3>
+                    <p>Today marks a pivotal moment in the crypto world: the launch of BTCto100k, a memecoin created to honor and celebrate Bitcoin's long-awaited journey to the elusive $100,000 milestone. BTCto100k isn't just a cryptocurrency; it's a community-driven tribute to Bitcoin, the original trailblazer, and its remarkable rise through the ranks of global finance.</p>
+                </div>
+
+                <div class="about-section" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Bitcoin: The Underdog Turned Superstar</h3>
+                    <p>For years, Bitcoin has been more than just a digital asset; it's been a legend in the making. Picture Bitcoin as the Rocky Balboa of finance—a scrappy underdog born in the depths of the 2008 financial crisis, fighting tooth and nail for legitimacy. At first, people doubted it. Banks scoffed, regulators frowned, and critics called it a "bubble." But Bitcoin never gave up. Each halving was like a personal trainer, building its strength, tightening its supply, and preparing it for the fight of its life.</p>
+                    <p>Now, Bitcoin stands at the brink of $100,000, a price target that has haunted and inspired crypto enthusiasts for over a decade. BTCto100k was born out of this spirit—a memecoin that captures the excitement, optimism, and resilience of Bitcoin as it reaches for the stars.</p>
+                </div>
+
+                <div class="about-section" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Join the BTCto100k Celebration</h3>
+                    <div class="celebration-steps">
+                        <div class="step">1. Buy BTCto100k and join the celebration.</div>
+                        <div class="step">2. Engage with the community on social media—share memes, stories, and predictions about Bitcoin's final push to $100k.</div>
+                        <div class="step">3. Spread the word about Bitcoin's incredible journey and what BTCto100k stands for.</div>
+                    </div>
+                </div>
+
+                <div class="about-section" data-aos="fade-up" data-aos-delay="600">
+                    <h3>Because $100k Is Just the Beginning</h3>
+                    <p>BTCto100k isn't just about a price target; it's about the spirit of crypto innovation and what Bitcoin represents. As we celebrate this historic moment, BTCto100k invites you to reflect on how far Bitcoin has come—and to imagine what lies beyond $100,000. After all, if Bitcoin can make it this far, who's to say it can't go even further?</p>
+                    <p>So buckle up, crypto enthusiasts—because Bitcoin is on the verge of $100k, and BTCto100k is here to make sure the journey is unforgettable. Let the celebrations begin!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="tokenomics" class="tokenomics" data-aos="fade-up" style="min-height: 100vh;">
+        <div class="container">
+            <h2>Tokenomics</h2>
+            <div class="tokenomics-grid">
+                <div class="tokenomics-item" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Launch Platform</h3>
+                    <p>Pump.fun</p>
+                    <p>Total Supply: 1Billion tokens</p>
+                </div>
+                <div class="tokenomics-item" data-aos="fade-left" data-aos-delay="400">
+                    <h3>Launch Date</h3>
+                    <p>November 24st, 2024</p>
+                </div>
+                
+              
+            </div>
+        </div>
+        <img src="wenlambo.png" alt="100KBTC Wen Lambo" class="tokenomics-bottom-image" data-aos="fade-left">
+    </section> -->
+
+    <section id="wallets" class="airlock" data-aos="fade-up">
+        <div class="container">
+            <h2>CA & Wallets</h2>
+            <div class="airlock-features">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="1000">
+                    <h3>📝 Token CA</h3>
+                    <p class="wallet-address">GCvHbweRkuP5jnosAN4Aju78uzjaZEhkAoqgEZWsaENn</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="1000">
+                    <h3>👥 Team Wallet</h3>
+                    <p class="wallet-address">9cqJu9kba2RdStVhnqVqKiJJq8E6RJuhtBLrfmwcDNmD</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="1200">
+                    <h3>📢 Marketing Wallet</h3>
+                    <p class="wallet-address">7q9jX1Tqwrqsjo9RYV16mPvYVTtWFxoq2NCxhRnvaDcR</p>
+                    <p>Donations accepted. Proceeds will be used to for marketing activities such as paying for trending.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Add these styles to your existing CSS */
+        .wallet-address {
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.9em;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            min-height: 120px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+
+    <section id="roadmap" class="roadmap" data-aos="fade-up">
+        <!-- <img src="holdnut.webp" alt="Hold Nut" class="roadmap-image" data-aos="fade-right"> -->
+        <div class="container">
+            <h2>Roadmap</h2>
+            <div class="about-content">
+                <div class="about-section" data-aos="fade-up">
+                    <h3>100kBTC Roadmap: Fueling the Journey to Bitcoin's $100k Milestone</h3>
+                    <p>The roadmap for 100kBTC is a bold and dynamic plan designed to build excitement, engage the community, and create lasting value. By combining innovative tokenomics, strategic marketing, and community-driven initiatives, we're positioning 100kBTC as the ultimate tribute to Bitcoin's rise to $100,000.</p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Phase 1</div>
+                        <h3>The Ignition (Day 1-10)</h3>
+                        <ul style="color: #94a3b8; text-align: left; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px;">• Token Launch with deflationary mechanism</li>
+                            <li style="margin-bottom: 8px;">• Daily 1% token burning for first 10 days</li>
+                            <li style="margin-bottom: 8px;">• TikTok marketing blitz with crypto influencers</li>
+                            <li style="margin-bottom: 8px;">• Community meme contests & giveaways</li>
+                            <li style="margin-bottom: 8px;">• Targeted marketing across crypto forums</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Phase 2</div>
+                        <h3>The Breakout (Post-Day 10)</h3>
+                        <ul style="color: #94a3b8; text-align: left; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px;">• Buy-Back and Burn at $1M Market Cap milestone</li>
+                            <li style="margin-bottom: 8px;">• Enhanced TikTok presence with live AMAs and creator partnerships</li>
+                            <li style="margin-bottom: 8px;">• Strategic exchange listings for improved liquidity</li>
+                            <li style="margin-bottom: 8px;">• Exclusive NFT drops and holder rewards</li>
+                            <li style="margin-bottom: 8px;">• Cross-project collaborations and partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Phase 3</div>
+                        <h3>To the Moon (Bitcoin Hits $100k)</h3>
+                        <ul style="color: #94a3b8; text-align: left; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 8px;">• Global virtual celebration event on TikTok Live</li>
+                            <li style="margin-bottom: 8px;">• Exclusive holder giveaways and rewards</li>
+                            <li style="margin-bottom: 8px;">• Limited-edition merchandise launch</li>
+                            <li style="margin-bottom: 8px;">• Token buy-backs from merchandise proceeds</li>
+                            <li style="margin-bottom: 8px;">• Community development and ecosystem expansion</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Week 3</div>
+                        <h3>Don't Nut</h3>
+                        <p>The challenge intensifies</p>
+                    </div>
+                </div> -->
+                <!-- <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Week 4</div>
+                        <h3>Don't Nut</h3>
+                        <p>Victory is within reach</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <img src="nonutchart.webp" alt="100KBTC Chart" class="roadmap-bottom-image" data-aos="fade-left">
+    </section>
+
+
+    <!-- <section id="community" class="community" data-aos="fade-up">
+        <h2>Join Our Community</h2>
+        <div class="hero-buttons">
+            <a href="https://t.me/nonuttoken" target="_blank" class="hero-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" focusable="false" class="chakra-icon custom-1gm3tio" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"></path></svg>
+                
+            </a>
+            <a href="https://www.x.com/nonuttoken" target="_blank" class="hero-button">
+                <img src="https://cdn.brandfetch.io/idS5WhqBbM/theme/light/logo.svg?k=bfHSJFAPEG" alt="Twitter">
+            </a>
+            <a href="#" target="_blank" class="hero-button">
+                <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="ds-nav-main-nav-chain-icon" aria-label="Moonshot"><path d="M69.8374 47.9306C70.6307 46.0406 68.3635 44.4306 66.4618 45.2706C62.6606 46.9392 58.5535 47.7974 54.4022 47.7906C38.127 47.7906 24.9358 34.864 24.9358 18.9157C24.9298 13.531 26.4597 8.25619 29.3458 3.71022C30.4503 1.968 29.1242 -0.443102 27.1019 0.0702296C11.5112 4.04855 0 17.9396 0 34.4635C0 54.0906 16.2363 70 36.2681 70C51.435 70 64.424 60.8806 69.8374 47.9306Z" fill="currentColor"></path><path d="M62.6526 8.11672C63.4175 5.86247 60.5264 4.19344 58.9554 5.97929L56.155 9.16564C55.0196 10.458 53.5269 11.3853 51.8652 11.8306C50.2035 12.2758 48.4472 12.2191 46.8178 11.6675L42.7993 10.3083C40.5459 9.5472 38.8776 12.4418 40.6671 14.0116L43.8526 16.8081C45.1451 17.9433 46.0724 19.4359 46.5176 21.0974C46.9628 22.759 46.906 24.5152 46.3543 26.1446L44.9948 30.1628C44.23 32.417 47.1211 34.0861 48.6911 32.2966L51.4915 29.1103C52.6269 27.8179 54.1195 26.8906 55.7812 26.4453C57.4429 26.0001 59.1993 26.0568 60.8287 26.6084L64.8472 27.9676C67.1015 28.7323 68.7708 25.8413 66.9803 24.2679L63.7948 21.4714C62.5024 20.3362 61.5751 18.8436 61.1299 17.1821C60.6847 15.5205 60.7415 13.7643 61.2931 12.1349L62.6526 8.11672Z" fill="currentColor"></path></svg>
+
+            </a>
+        </div>
+    </section> -->
+
+    
+    
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+             offset: 0,
+             excludeElements: 'body'
+        });
+        document.body.setAttribute('data-aos-easing', 'none');
+
+        // Countdown Timer
+        function updateCountdown() {
+            const launchDate = new Date('2024-11-01T00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Confession form submission
+        document.getElementById('confession-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const confession = document.getElementById('confession').value;
+            const wallet = document.getElementById('wallet').value;
+            
+            // Send data to webhook
+            const webhookUrl = 'https://eo7sjqajkz92l11.m.pipedream.net'; // Replace with your actual webhook URL
+            
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    confession: confession,
+                    wallet: wallet,
+                    timestamp: new Date().toISOString()
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('submission-message').textContent = 'Confession submitted successfully!';
+                    this.reset(); // Clear the form
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('submission-message').textContent = 'Submission failed. Please try again.';
+            })
+            .finally(() => {
+                // Hide the message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('submission-message').textContent = '';
+                }, 3000);
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && !e.target.closest('.top-nav')) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+        // Wallet address validation
+        document.getElementById('wallet').addEventListener('input', function(e) {
+            const walletRegex = /^[1-9A-HJ-NP-Za-km-z]{32,44}$/;
+            if (this.value && !walletRegex.test(this.value)) {
+                this.setCustomValidity('Please enter a valid Solana wallet address');
+                this.classList.add('invalid');
+            } else {
+                this.setCustomValidity('');
+                this.classList.remove('invalid');
+            }
+        });
+
+        // Contract form submission
+        document.getElementById('contract-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const telegram = document.getElementById('telegram').value;
+            
+            // Send data to webhook
+            fetch('https://eo3rvwxcbjbc0x5.m.pipedream.net', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    telegram: telegram,
+                    timestamp: new Date().toISOString(),
+                    type: 'pledge'
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('contract-message').textContent = 'Pledge submitted successfully!';
+                    this.reset(); // Clear the form
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('contract-message').textContent = 'Submission failed. Please try again.';
+            })
+            .finally(() => {
+                // Hide the message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('contract-message').textContent = '';
+                }, 3000);
+            });
+        });
+    </script>
+
+    <!-- Add this script just before the closing </body> tag -->
+    <script>
+        // Existing scripts...
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the mobile menu button and nav links
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Toggle menu when clicking the button
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                });
+            }
+
+            // Close menu when clicking a link
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('show');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.mobile-menu-button') && !e.target.closest('.nav-links')) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+    <!-- Update the CSS for the mobile menu -->
+    <style>
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(15, 23, 42, 0.95);
+                padding: 1rem 0;
+                z-index: 1000; /* Add this to ensure menu appears above other content */
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 0.5rem 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 0.5rem 0;
+                width: 100%;
+            }
+
+            .mobile-menu-button {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                padding: 0.5rem;
+                z-index: 1001; /* Add this to ensure button stays clickable */
+            }
+        }
+    </style>
+</body>
+</html>
