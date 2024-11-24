@@ -1051,6 +1051,37 @@
                     padding: 10px 0;
                 }
             }
+
+            /* Add these new styles for the floating lambo */
+            .floating-lambo {
+                position: absolute;
+                width: 200px;
+                height: auto;
+                /* top: 50%; */
+                bottom: -150px;
+                transform: translateY(-50%);
+                /* z-index: 10; */
+                opacity: 0.8;
+                animation: floatAcross 10s linear infinite;
+                pointer-events: none;
+            }
+
+            @keyframes floatAcross {
+                0% {
+                    right: -150px;
+                }
+                100% {
+                    right: 100%;
+                }
+            }
+
+            /* Add mobile responsiveness */
+            @media (max-width: 768px) {
+                .floating-lambo {
+                    width: 200px;
+                    bottom:-165px;
+                }
+            }
         </style>
     </head>
 <body>
@@ -1152,6 +1183,9 @@
                 </div>
             </div>
         </div>
+
+    <img src="wen_lambo.png" alt="Wen Lambo" class="floating-lambo">
+
     </section>
 
     <!-- <section id="tokenomics" class="tokenomics" data-aos="fade-up" style="min-height: 100vh;">
