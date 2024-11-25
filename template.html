@@ -11,7 +11,7 @@
     <style>
         :root {
             --primary-background: #faedcd;
-            --secondary-background: color-mix(in srgb, var(--primary-background) 60%, black);
+            --secondary-background: color-mix(in srgb, var(--primary-background) 75%, black);
             --heading-font: 'Luckiest Guy', sans-serif;
             --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             --primary-text-color: #000000;
@@ -49,6 +49,7 @@
             display: flex;
             justify-content: space-around;
             list-style-type: none;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.9);
         }
 
         nav ul li a {
@@ -216,6 +217,7 @@
                 left: 0;
                 width: 100%;
                 background-color: var(--primary-background);
+                border-bottom: 1px solid rgba(26, 26, 26, 0.9);
             }
 
             nav ul.show {
@@ -286,7 +288,7 @@
             /* margin-top: 60px; */
             padding: 1.5rem;
             text-align: center;
-            height: calc(100vh - 60px);
+            height: calc(100dvh - 60px);
             /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
             position: relative;
             /* background: rgba(67, 97, 238, 0.3); */
