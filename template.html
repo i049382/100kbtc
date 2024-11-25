@@ -282,7 +282,7 @@
 
         .hero-content {
             scroll-padding-top: 60px;
-            padding-top: 60px;
+            padding-top: 70px;
             /* margin-top: 60px; */
             padding: 1.5rem;
             text-align: center;
@@ -310,8 +310,8 @@
         .buy-button {
             background: #ff4d6d;
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 25px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
             font-size: 1.5rem;
             letter-spacing: 0.2em;
             font-weight: bold;
@@ -330,6 +330,7 @@
 
         .hero-content h1 {
             margin-bottom: 0;
+            padding-top: 10px;
             /* font-size: 3.5rem; */
             /* text-transform: uppercase; */
             /* letter-spacing: -0.02em; */
@@ -346,11 +347,11 @@
             gap: 0.75rem;
             width: 100%;
             max-width: 400px;
-            position: absolute;
+            /* position: absolute; */
             bottom: 10px;
             left: 50%;
-            transform: translateX(-50%);
-            padding: 0 2rem;
+            /* transform: translateX(-50%); */
+            /* padding: 0 2rem; */
         }
 
         .social-row {
@@ -402,14 +403,20 @@
 
     <main>
         <section id="hero">
-            <div class="hero-content">
+            <div class="hero-content" style="display: flex; flex-direction: column; align-items: center;">
                 <h1>
                     <img src="header.svg" style="width: 100%; max-width: 300px;" alt="MemeCoin Logo">
                 </h1>
+                <div class="hero-logo-container" style="flex-flow: column;
+                display: flex
+            ;
+                flex: 1;
+                justify-content: space-evenly;">
                 <div class="hero-logo">
                     <img src="100kbtc_main.png" alt="MemeCoin Logo">
                 </div>
                 <p>Certified Memester</p>
+            </div>
                 <div class="hero-buttons">
                     <div class="social-row">
                         <a href="#" class="social-button">
