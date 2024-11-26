@@ -394,6 +394,11 @@
             scroll-padding-top: 60px;
         }
     </style>
+
+<script src='https://terminal.jup.ag/main-v3.js'></script>
+
+<!-- Prepare a div in your <body> for Terminal to render -->
+<!-- Adjust the width and height to suit your requirements -->
 </head>
 <body data-token-address="0x123456789012345678901234567890123456789">
     <header>
@@ -508,8 +513,10 @@
         </section>
 
         <section id="PORN">
-            <h2 class="fade-in">How to Buy</h2>
+            <h2 class="fade-in">Buy from Jupiter</h2>
             <div class="how-to-buy-steps fade-in">
+<div id="integrated-terminal" style="width: 400px; height: 568px;"></div>
+
                 <h3>Step-by-step guide to purchasing our token on PumpFun:</h3>
                 <ol>
                     <li>Create a Solana wallet (e.g., Phantom, Solflare) if you don't have one already.</li>
@@ -543,6 +550,15 @@
     </footer>
 
     <script>
+
+window.Jupiter.init({
+  displayMode: "integrated",
+  integratedTargetId: "integrated-terminal",
+  endpoint: "https://api.mainnet-beta.solana.com",
+});
+
+
+
         // Dynamic navigation
         const sections = document.querySelectorAll('section');
         const navMenu = document.getElementById('nav-menu');
