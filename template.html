@@ -396,9 +396,6 @@
     </style>
 
 <script src='https://terminal.jup.ag/main-v3.js'></script>
-
-<!-- Prepare a div in your <body> for Terminal to render -->
-<!-- Adjust the width and height to suit your requirements -->
 </head>
 <body data-token-address="0x123456789012345678901234567890123456789">
     <header>
@@ -552,9 +549,14 @@
     <script>
 
 window.Jupiter.init({
-  displayMode: "integrated",
-  integratedTargetId: "integrated-terminal",
+  displayMode: "widget",
   endpoint: "https://api.mainnet-beta.solana.com",
+  strictTokenList: false,
+  formProps: {
+    fixedOutputMint: true,
+    swapMode: "ExactIn",
+    initialOutputMint: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  },
 });
 
 
